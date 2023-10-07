@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Gaming Convention",
+      "description": "A gaming convention is a large gathering of gamers and gaming industry professionals. It is a place for gamers to try out new games, meet other gamers, and participate in gaming tournaments. Conventions also typically feature talks and panels from game developers and publishers, as well as cosplay contests and other gaming-related activities.",
+      "picUrl": "https://i.ibb.co/KzqkGVB/gaming-convention.jpg",
+      "costPerDay": 50
+    },
+    {
+      "id": 2,
+      "name": "Esports Tournament",
+      "description": "An esports tournament is a competitive event where gamers compete against each other in video games. Tournaments can be held for a variety of different games, and prize pools can range from a few hundred dollars to millions of dollars. Esports tournaments are often streamed online, and can draw millions of viewers.",
+      "picUrl": "https://i.ibb.co/ysgZnHT/esportstourney.jpg",
+      "costPerDay": 25
+    },
+    {
+      "id": 3,
+      "name": "Cosplay Contest",
+      "description": "A cosplay contest is an event where people compete in costumes inspired by video games, movies, and other pop culture media. Cosplayers spend months and sometimes years crafting their costumes, and the level of detail and creativity is often astonishing. Cosplay contests are a fun and creative way for people to express their love for their favorite characters and fandoms.",
+      "picUrl": "https://i.ibb.co/wWFK9N0/cosplay.jpg",
+      "costPerDay": 20
+    },
+    {
+      "id": 4,
+      "name": "Tech Conference & Expo",
+      "description": "A tech conference & expo is an event for tech professionals and enthusiasts to learn about the latest trends and technologies. Conferences typically feature talks and panels from industry experts, as well as exhibits from tech companies. Expos are a great place to see the latest tech products and services in person, and to network with other tech professionals.",
+      "picUrl": "https://i.ibb.co/K0xHC9h/tech-expo.jpg",
+      "costPerDay": 100
+    },
+    {
+      "id": 5,
+      "name": "Hackathon",
+      "description": "A hackathon is an event where people come together to collaborate on software projects. Hackathons can be focused on a specific theme, such as developing new healthcare apps or building new financial trading systems. Hackathons are a great way to learn new tech skills, and to build and launch new products and services.",
+      "picUrl": "https://i.ibb.co/PFb3Nx7/hackerthon.jpg",
+      "costPerDay": 15
+    },
+    {
+      "id": 6,
+      "name": "Product Launch",
+      "description": "A product launch is an event where a company introduces a new product to the market. Product launches are often highly anticipated, and can generate a lot of excitement and buzz around a new product. Companies typically use product launches to showcase the features and benefits of their new product, and to convince potential customers to buy it.",
+      "picUrl": "https://i.ibb.co/VJSJcVK/productlaunch.jpg",
+      "costPerDay": 50
+    }
+  ]
+  
