@@ -8,7 +8,7 @@ const Service = ({ service }) => {
             data-aos-easing="ease-in-sine"
             data-aos-duration="1000" className='p-5 border-2 border-black m-auto  hover:bg-black hover:text-white'>
             <div className='flex flex-col items-center relative'>
-                <div className='max-w-[100%] md:h-[300px] bg-black'>
+                <div className='w-[100%] md:h-[300px] bg-black'>
                     <img className='w-full h-full' src={service.picUrl} alt={service.name} />
                 </div>
                 <div className='bg-black bg-opacity-70 w-full absolute'>
