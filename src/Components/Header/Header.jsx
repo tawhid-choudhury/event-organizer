@@ -11,10 +11,10 @@ const Header = () => {
                 <h2 className="font-electrolize hidden sm:block md:text-xl lg:text-3xl p-2 border-2 ">Games <span className="bg-white px-2 text-black ">& Tech</span></h2>
                 <div className="flex flex-row md:flex-col items-center gap-4">
                     <div className="flex gap-5 items-center justify-end">
-                        <div className="w-10 rounded-full">
+                        {/* <div className="w-10 rounded-full">
                             <img src={dflt} className="rounded-full" />
                         </div>
-                        <button className="border-2 p-2 hover:bg-white hover:text-black font-bold">LogOut</button>
+                        <button className="border-2 p-2 hover:bg-white hover:text-black font-bold">LogOut</button> */}
                     </div>
                     <ul className="hidden md:flex gap-5">
                         <li><NavLink to="/">Home</NavLink></li>

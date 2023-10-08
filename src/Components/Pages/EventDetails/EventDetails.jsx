@@ -14,8 +14,8 @@ const EventDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="max-w-[90%] m-auto my-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 justify-between">
+            <div className="max-w-[70%] m-auto my-10">
+                <div className="flex flex-col md:flex-row gap-5">
                     <div>
                         <h2 className="text-5xl text-black">Description</h2>
                         <p className="text-xl py-10 text-justify">{service.description}</p>
@@ -25,11 +25,11 @@ const EventDetails = () => {
                         <div>
                             <div className="flex flex-col gap-3  p-2 mb-5">
                                 <h2 className="text-2xl text-black">Cost Per Day: </h2>
-                                <h2 className="text-center border-2 py-2 w-[250px]">{service.costPerDay},000 </h2>
+                                <h2 className="text-center border-2 py-2 w-[200px]">{service.costPerDay},000 </h2>
                             </div>
                             <div className="flex flex-col items-start gap-3 p-2">
                                 <h2 className="text-2xl text-black">Venues:</h2>
-                                {service.venues.map((v, idx) => <div className="text-center border-2 p-2 w-[250px]" key={idx}>{v}</div>)}
+                                {service.venues.map((v, idx) => <div className="text-center border-2 p-2 w-[200px]" key={idx}>{v}</div>)}
                             </div>
                         </div>
                     </div>
