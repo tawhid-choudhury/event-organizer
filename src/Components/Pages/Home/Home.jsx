@@ -1,14 +1,12 @@
 import { useLoaderData } from "react-router-dom";
-import Banner from "./Banner";
 import Service from "./Service";
 import DefaultCarousel from "./DefaultCarousel";
 
 const Home = () => {
     const services = useLoaderData();
-    console.log(services);
+    // console.log(services);
     return (
         <div className="">
-            {/* <Banner></Banner> */}
             <DefaultCarousel></DefaultCarousel>
             <div className="max-w-[90%] m-auto my-10 ">
                 <h1 className="text-5xl text-black">Our services</h1>

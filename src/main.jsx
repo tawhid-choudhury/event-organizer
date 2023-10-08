@@ -7,6 +7,9 @@ import {
 import './index.css'
 import Root from './Components/Root/Root';
 import Home from './Components/Pages/Home/Home';
+import Login from './Components/Pages/Login/Login';
+import Register from './Components/Pages/Registrar/Register';
+import EventDetails from './Components/Pages/EventDetails/EventDetails';
 
 const router = createBrowserRouter([
   {
@@ -16,15 +19,20 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("services.json")
+        loader: () => fetch("../public/services.json")
       },
       {
         path: "/login",
-        element: <h1>login</h1>
+        element: <Login></Login>
       },
       {
         path: "/register",
-        element: <h1>regi</h1>
+        element: <Register></Register>
+      },
+      {
+        path: "/eventDetails/:id",
+        element: <EventDetails></EventDetails>,
+        loader: () => fetch("../public/services.json")
       },
     ]
   },
