@@ -1,8 +1,13 @@
-# React + Vite
+## Live Link: https://gameandtecha9.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Website name: GameAndTech
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This website is created using react routes
+- It is a single page wesite
+- In this website, you can log in using Google, facebook and also emailpass
+- profile picture and log out button is present in the navbar
+- there is a 404 error route
+- page dose not got to login after reloading private route
+- website is responsive
+- two extra routes were added named blog and contact
+- home page has two additional sections excluding services
