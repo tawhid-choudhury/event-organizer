@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const EventDetails = () => {
     const { id } = useParams();
@@ -33,6 +33,13 @@ const EventDetails = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div><Link to='/contact'>
+                    <h1 className="text-2xl bg-black text-white w-[250px] text-center p-5">
+                        contact us via email
+                    </h1>
+                </Link>
                 </div>
             </div>
         </div>

@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC_LLJruFcyWuOK1rFKzkS2qv_rsVYaPVc",
-  authDomain: "gameandtecha9.firebaseapp.com",
-  projectId: "gameandtecha9",
-  storageBucket: "gameandtecha9.appspot.com",
-  messagingSenderId: "238352016659",
-  appId: "1:238352016659:web:fc8554562e7701561ba6e6",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

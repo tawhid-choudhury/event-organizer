@@ -13,6 +13,7 @@ import EventDetails from './Components/Pages/EventDetails/EventDetails';
 import AuthProvider from './providers/AuthProvider';
 import Blogs from './Components/Pages/Blogs/Blogs';
 import Contact from './Components/Pages/Contact/Contact';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -34,17 +35,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/eventDetails/:id",
-        element: <EventDetails></EventDetails>,
+        element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
         loader: () => fetch("/services.json")
       },
       {
         path: "/blogs",
-        element: <Blogs></Blogs>,
+        element: <PrivateRoute><Blogs></Blogs></PrivateRoute>,
         loader: () => fetch("/blogs.json")
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>,
       },
     ]
   },

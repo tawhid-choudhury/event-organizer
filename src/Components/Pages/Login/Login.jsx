@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import swal from 'sweetalert';
 import { FcGoogle } from "react-icons/fc";
@@ -9,13 +9,14 @@ const Login = () => {
     const { loginEmailPass, googleSignin, facebookSignin, user } = useContext(AuthContext)
     const nav = useNavigate();
     const [errorText, setErrorText] = useState("")
+    const location = useLocation();
 
     const handleFacebook = () => {
         facebookSignin()
             .then((uc) => {
                 console.log(uc);
                 swal("Complete!", "Logged in!", "success");
-                nav("/")
+                nav(location?.state ? location.state : "/")
             }).catch((err) => {
                 if (err.code === "auth/email-already-in-use") {
                     swal("Error!", "Email is already in use. Please choose a different email.", "error");
@@ -33,7 +34,7 @@ const Login = () => {
             .then((uc) => {
                 console.log(uc);
                 swal("Complete!", "Logged in!", "success");
-                nav("/")
+                nav(location?.state ? location.state : "/")
             }).catch((err) => {
                 if (err.code === "auth/email-already-in-use") {
                     swal("Error!", "Email is already in use. Please choose a different email.", "error");
@@ -56,7 +57,7 @@ const Login = () => {
                 console.log(uc);
 
                 swal("Complete!", "Logged in!", "success");
-                nav("/")
+                nav(location?.state ? location.state : "/")
             }).catch((err) => {
                 if (err.code === "auth/invalid-login-credentials") {
                     swal("Error!", "Invalid login credentials", "error");
