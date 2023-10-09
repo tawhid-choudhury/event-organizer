@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import dflt from "./default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
 import { FaStream } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -20,15 +19,17 @@ const Header = () => {
                 <div className="flex flex-row md:flex-col items-center gap-4">
                     <div className="flex gap-5 items-center justify-end">
                         <div className="w-10 rounded-full">
-                            <img src={`${user?.photoURL ? user.photoURL : dflt}`} className="rounded-full" />
+                            <img src={user?.photoURL ? user.photoURL : "https://i.ibb.co/F8JsB1D/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"} className="rounded-full" />
                         </div>
-                        <p>{user?.email}</p>
+                        <p className="text-xs hidden md:block">{user?.email}</p>
                         <button onClick={handleLogout} className="border-2 p-2 hover:bg-white hover:text-black font-bold">LogOut</button>
                     </div>
                     <ul className="hidden md:flex gap-5">
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/login">Login</NavLink></li>
                         <li><NavLink to="/register">Register</NavLink></li>
+                        <li><NavLink to="/blogs">Blogs</NavLink></li>
+                        <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                     <div className="dropdown dropdown-end md:hidden border-2 p-3">
                         <label tabIndex={0} className="bg-white"><FaStream>&nbsp;</FaStream></label>
@@ -36,6 +37,8 @@ const Header = () => {
                             <li className="py-5"><NavLink to="/">Home</NavLink></li>
                             <li className="py-5"><NavLink to="/login">Login</NavLink></li>
                             <li className="py-5"><NavLink to="/register">Register</NavLink></li>
+                            <li className="py-5"><NavLink to="/blogs">Blogs</NavLink></li>
+                            <li className="py-5"><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
                     </div>
                 </div>

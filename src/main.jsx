@@ -11,6 +11,8 @@ import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Registrar/Register';
 import EventDetails from './Components/Pages/EventDetails/EventDetails';
 import AuthProvider from './providers/AuthProvider';
+import Blogs from './Components/Pages/Blogs/Blogs';
+import Contact from './Components/Pages/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,15 @@ const router = createBrowserRouter([
         path: "/eventDetails/:id",
         element: <EventDetails></EventDetails>,
         loader: () => fetch("/services.json")
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+        loader: () => fetch("/blogs.json")
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
     ]
   },
