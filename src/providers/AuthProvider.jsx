@@ -1,12 +1,27 @@
 import { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 export const AuthContext = createContext(null)
 const AuthProvider = ({ children }) => {
     // console.log(children);
+    const googleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
+
+
+    // facebook
+    const facebookSignin = () => {
+        setLoader(true);
+        return signInWithPopup(auth, facebookProvider);
+    }
+
+    // Google
+    const googleSignin = () => {
+        setLoader(true);
+        return signInWithPopup(auth, googleProvider);
+    }
 
     // email registration
     const regEmailPass = (email, password) => {
@@ -37,7 +52,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const p = { user, setUser, regEmailPass, loginEmailPass, logout, loader }
+    const p = { user, setUser, regEmailPass, loginEmailPass, logout, loader, googleSignin, facebookSignin }
 
     return (
         <AuthContext.Provider value={p}>
